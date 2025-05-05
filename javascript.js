@@ -101,7 +101,8 @@ for (i = 0; i < 5; i++) {
 
     tallyScore(humanScore, computerScore);
 
-    console.log(`Human score: ${totalHumanScore}, Computer score: ${totalComputerScore}`);
+    console.log(`ROUND ${i+1}: Human score: ${totalHumanScore}, Computer score: ${totalComputerScore}
+                `);
 }
 
 // to determine the final winner
