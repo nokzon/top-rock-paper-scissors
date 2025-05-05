@@ -21,11 +21,66 @@ function getHumanChoice() {
     switch (choice) {
         case "rock":
             return "rock";
+            break;
         case "paper":
             return "paper";
+            break;
         case "scissors":
             return "scissors";
         default:
             console.log("Error");
     }
 }
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == "rock") {
+        switch (computerChoice) {
+            case "rock":
+                return "Computer chooses rock. Rock and rock does... nothing! It's a tie!";
+                break;
+            case "paper":
+                computerScore++;
+                return "Computer chooses paper. Paper eats rock. You lost :(";
+                break;
+            default: // computer choose scissors
+                humanScore++;
+                return "Computer chooses scissors. Rock beats scissors. You win :)";
+        }
+    } else if (humanChoice == "paper") {
+        switch (computerChoice) {
+            case "rock":
+                humanScore++;
+                return "Computer chooses rock. Paper eats rock. You win :)";
+                break;
+            case "paper":
+                return "Computer chooses paper. Paper and paper does... nothing. It's a tie.";
+                break;
+            default: // computer choose scissors
+                computerScore++;
+                return "Computer chooses scissors. Scissors cuts paper. You lost :(";
+        }
+    } else { // human choose scissors
+        switch (computerChoice) {
+            case "rock":
+                computerScore++;
+                return "Computer chooses rock. Rock breaks scissors. You losk :(";
+                break;
+            case "paper":
+                humanScore++;
+                return "Computer chooses paper. Scissors cuts paper. You win :)";
+                break;
+            default:
+                return "Computer chooses scissors. Scissors and scissors does... nothing. It's a tie.";
+        } 
+    }
+}
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+console.log(playRound(humanSelection, computerSelection));
+console.log(`human score = ${humanScore}, computer score = ${computerScore}`);
