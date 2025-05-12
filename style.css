@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     gap: 5px;
     align-items: end;
-    padding: 35px;
+    padding: 80px;
     color: #606c38;
 }
 
@@ -27,7 +27,7 @@ body {
     justify-content: center;
     gap: 30px;
     padding: 40px;
-    padding-top: 200px;
+    padding-top: 130px;
 }
 
 .buttons {
@@ -42,6 +42,15 @@ button {
     background-color: #dda15e;
     border: #dda15e;
     color: #fefae0;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: #ce985a;
+}
+
+button:active {
+    background-color: #bc6c25;
 }
 
 #displayResult {
