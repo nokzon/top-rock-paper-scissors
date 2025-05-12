@@ -20,7 +20,6 @@ var scissors = document.querySelector("#scissors");
 
 // div to display result
 var div = document.querySelector("div");
-console.log(div);
 
 function playGame(computerChoice) {
     humanScore = 0;
@@ -29,43 +28,43 @@ function playGame(computerChoice) {
     rock.addEventListener("click", function (e) {
         switch (computerChoice) {
             case "rock":
-                console.log("Computer chooses rock. Rock and rock does... nothing! It's a tie!");
+                div.textContent = "Computer chooses rock. Rock and rock does... nothing! It's a tie!";
                 break;
             case "paper":
                 computerScore++;
-                console.log("Computer chooses paper. Paper eats rock. You lost :(");
+                div.textContent = "Computer chooses paper. Paper eats rock. You lost :(";
                 break;
             default: // computer choose scissors
                 humanScore++;
-                console.log("Computer chooses scissors. Rock beats scissors. You win :)");   
+                div.textContent = "Computer chooses scissors. Rock beats scissors. You win :)";   
         }    
     });
     paper.addEventListener("click", function (e) {
         switch (computerChoice) {
             case "rock":
                 humanScore++;
-                console.log("Computer chooses rock. Paper eats rock. You win :)");
+                div.textContent = "Computer chooses rock. Paper eats rock. You win :)";
                 break;
             case "paper":
-                console.log("Computer chooses paper. Paper and paper does... nothing. It's a tie.");
+                div.textContent = "Computer chooses paper. Paper and paper does... nothing. It's a tie.";
                 break;
             default: // computer choose scissors
                 computerScore++;
-                console.log("Computer chooses scissors. Scissors cuts paper. You lost :(");
+                div.textContent = "Computer chooses scissors. Scissors cuts paper. You lost :(";
         }  
     });
     scissors.addEventListener("click", function (e) {
         switch (computerChoice) {
             case "rock":
                 computerScore++;
-                console.log("Computer chooses rock. Rock breaks scissors. You losk :(");
+                div.textContent = "Computer chooses rock. Rock breaks scissors. You losk :(";
                 break;
             case "paper":
                 humanScore++;
-                console.log("Computer chooses paper. Scissors cuts paper. You win :)");
+                div.textContent = "Computer chooses paper. Scissors cuts paper. You win :)";
                 break;
             default:
-                console.log("Computer chooses scissors. Scissors and scissors does... nothing. It's a tie.");
+                div.textContent = "Computer chooses scissors. Scissors and scissors does... nothing. It's a tie.";
         }     
     });
 }
