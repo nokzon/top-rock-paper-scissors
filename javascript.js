@@ -15,10 +15,10 @@ function getComputerChoice() {
 
 function checkwinner(humanScore, computerScore) {
     if (humanScore == 5) {
-        alert("You win YAY");
+        alert("YOU WIN! 🕺🏻 \nPlay Again?");
         location.reload();
     } else if (computerScore == 5) {
-        alert ("Computer wins OHNO");
+        alert ("Computer wins... 🦦 \nPlay Again?");
         location.reload();
     }
 };
@@ -91,4 +91,5 @@ var displayResult = document.querySelector("#displayResult");
 var displayHumanScore = document.querySelector("#humanScore");
 var displayComputerScore = document.querySelector("#computerScore");
 
+displayScores();
 playGame();
