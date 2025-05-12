@@ -93,17 +93,14 @@ function tallyScore (humanScore, computerScore) {
     }
 }
 
-for (i = 0; i < 5; i++) {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
-    playGame(humanSelection, computerSelection);
+playGame(humanSelection, computerSelection);
 
-    tallyScore(humanScore, computerScore);
+tallyScore(humanScore, computerScore);
 
-    console.log(`ROUND ${i+1}: Human score: ${totalHumanScore}, Computer score: ${totalComputerScore}
-                `);
-}
+console.log(`Human score: ${totalHumanScore}, Computer score: ${totalComputerScore}`);
 
 // to determine the final winner
 if (totalHumanScore > totalComputerScore) {
